@@ -11,7 +11,11 @@ const config: Config = {
   projectName: 'itsdocs.github.io',
 
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+  hooks: {
+    onBrokenMarkdownLinks: 'warn',
+  },
+},
 
   favicon: 'img/favicon.ico',
 
