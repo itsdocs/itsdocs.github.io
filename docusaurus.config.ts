@@ -30,7 +30,9 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
         },
-        blog: false,
+        blog: {
+  showReadingTime: true,
+},
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -49,19 +51,25 @@ const config: Config = {
         alt: 'ITS Docs Logo',
         src: 'img/logo.svg',
       },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Documentación',
-        },
-        {
-          href: 'https://github.com/itsdocs/itsdocs.github.io',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
+      
+        items: [
+  {
+    type: 'docSidebar',
+    sidebarId: 'tutorialSidebar',
+    position: 'left',
+    label: 'Documentación',
+  },
+  {
+    to: '/blog',
+    label: 'Blog',
+    position: 'left',
+  },
+  {
+    href: 'https://github.com/itsdocs/itsdocs.github.io',
+    label: 'GitHub',
+    position: 'right',
+  },
+],
     },
     footer: {
       style: 'dark',
